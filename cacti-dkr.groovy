@@ -1,5 +1,5 @@
 pipeline {
-    
+    agent any    
     environment {
         PROJECT_NAME = "DOCKER CACTI"
         OWNER_NAME = "GM"
