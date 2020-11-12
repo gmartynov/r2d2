@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo "===========docker build==========="
                 sh """
-                docker run -itp 5050:80 smcline06/cacti
+                docker run -it -p 5050:80 smcline06/cacti
                 """
             }
         }
