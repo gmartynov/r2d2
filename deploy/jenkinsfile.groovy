@@ -1,6 +1,6 @@
 pipeline {
     agent {
-	label 'bunt01' 
+	label 'cent01' 
 	}
     environment {
         PROJECT_NAME = "DOCKER PYTHONHTTP AND LYNX"
