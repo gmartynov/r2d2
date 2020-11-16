@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+	label 'main'
+	}
     environment {
         PROJECT_NAME = "DOCKER PYTHONHTTP AND LYNX"
         OWNER_NAME = "GM"
