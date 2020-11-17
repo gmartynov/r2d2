@@ -1,6 +1,7 @@
 ---
 - name: jenkins job for Debian
   hosts: staging
+  become: yes
 
   tasks:
    - name: copy
