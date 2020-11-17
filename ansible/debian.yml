@@ -3,12 +3,14 @@
   hosts: staging
 
   tasks:
-  - name:  copy
+  - name: copy
     src: debfile.txt
     dest: /home/engineer/
                                              
-  - name: installation
+  - name: install systat
     apt: name=systat state=installed
+    
+  - name: install monit
     apt: name=monit state=installed
 
   - name: service
