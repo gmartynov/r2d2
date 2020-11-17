@@ -10,10 +10,10 @@
       dest: /home/engineer/
                                              
    - name: install systat
-     apt: name=systat state=installed
+     apt: name=systat state=latest
     
    - name: install monit
-     apt: name=monit state=installed
+     apt: name=monit state=latest
 
    - name: service
      service: name=monit state=restarted enabled=yes
