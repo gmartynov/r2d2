@@ -3,17 +3,17 @@
   hosts: prod
 
   tasks:
-  - name: copy
+   - name: copy
          src: redfile.txt
          dest: /home/engineer/
 
-  - name: install systat
+   - name: install systat
         yum: name=systat state=installed
         
-  - name: install monit
+   - name: install monit
         yum: name=monit state=installed
 
-  - name: service
+   - name: service
         service: name=monit state=restarted enabled=yes
 
 
