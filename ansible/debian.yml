@@ -9,8 +9,8 @@
       src: debfile.txt
       dest: /home/engineer/
                                              
-   - name: install systat
-     apt: name=systat state=latest
+   - name: install sysstat
+     apt: name=sysstat state=latest
     
    - name: install monit
      apt: name=monit state=latest
