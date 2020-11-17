@@ -10,12 +10,12 @@
          dest: /home/engineer/
 
    - name: install sysstat
-        yum: name=sysstat state=installed
+     yum: name=sysstat state=installed
         
    - name: install monit
-        yum: name=monit state=installed
+     yum: name=monit state=installed
 
    - name: service
-        service: name=monit state=restarted enabled=yes
+     service: name=monit state=restarted enabled=yes
 
 
