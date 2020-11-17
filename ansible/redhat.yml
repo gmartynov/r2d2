@@ -4,6 +4,7 @@
 
   tasks:
    - name: copy
+     copy:
          src: redfile.txt
          dest: /home/engineer/
 
