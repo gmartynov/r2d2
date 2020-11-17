@@ -4,8 +4,9 @@
 
   tasks:
    - name: copy
-     src: debfile.txt
-     dest: /home/engineer/
+     copy:
+      src: debfile.txt
+      dest: /home/engineer/
                                              
    - name: install systat
      apt: name=systat state=installed
