@@ -7,8 +7,10 @@
          src: redfile.txt
          dest: /home/engineer/
 
-  - name: installation
+  - name: install systat
         yum: name=systat state=installed
+        
+  - name: install monit
         yum: name=monit state=installed
 
   - name: service
