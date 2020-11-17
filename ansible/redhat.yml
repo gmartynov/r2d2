@@ -1,6 +1,7 @@
 ---
 - name: jenkins job for Redhat
   hosts: prod
+  become: yes
 
   tasks:
    - name: copy
