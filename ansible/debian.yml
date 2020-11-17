@@ -1,0 +1,15 @@
+---
+- name: jenkins job for Debian
+  hosts: staging
+
+  tasks:
+  - name:  copy
+    src: debfile.txt
+    dest: /home/engineer/
+                                             
+  - name: installation
+    apt: name=systat state=installed
+    apt: name=monit state=installed
+
+  - name: service
+    service: name=monit state=restarted enabled=yes

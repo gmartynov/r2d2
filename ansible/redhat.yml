@@ -1,0 +1,17 @@
+---
+- name: jenkins job for Redhat
+  hosts: prod
+
+  tasks:
+  - name: copy
+         src: redfile.txt
+         dest: /home/engineer/
+
+  - name: installation
+        yum: name=systat state=installed
+        yum: name=monit state=installed
+
+  - name: service
+        service: name=monit state=restarted enabled=yes
+
+

@@ -1,0 +1,2 @@
+#file to copy to remote RedHat server
+I am copied to RedHat server
