@@ -12,11 +12,11 @@
     yum: name=httpd state=latest
 
   - name: Copy mypage to servers
-    copy: src ={{ source_folder }}/index.html dest={{ destin_folder }}/index.html mode=0555
+    copy: src={{ source_folder }}/index.html dest={{ destin_folder }}/index.html mode=0555
     notify: RestartApache
 
   - name: Copy pics to servers
-    copy: src ={{ source_folder }}/pics/{{ item }} dest={{ destin_folder }}/pics/ mode=0555
+    copy: src={{ source_folder }}/pics/{{ item }} dest={{ destin_folder }}/pics/ mode=0555
     loop: 
           - "q.jpg"
           - "qq.jpg"
