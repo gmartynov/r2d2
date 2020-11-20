@@ -1,0 +1,18 @@
+[staging]
+linux1	ansible_host=bunt01.star.wars	owner=Jedi
+
+[prod]
+linux2	ansible_host=cent01.star.wars	owner=r2d2
+
+[all_linux:children]
+prod
+staging
+
+#[winhost]
+#windows1 ansible_host=baron.star.wars
+#
+#[winhost:vars]
+#ansible_user = baron
+#ansible_port = 5986
+#ansible_connection = winrm
+#ansible_winrm_server_cert_validation = ignore
