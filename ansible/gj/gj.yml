@@ -4,19 +4,19 @@
   become: yes
 
   vars:
-    src-path: ./ansible/gj/
-    dst-path: ./var/www/html
+    source_folder: ./ansible/gj/
+    destin_folder: ./var/www/html
 
   tasks:
   - name: Install Apache
     yum: name=httpd state=latest
 
   - name: Copy mypage to servers
-    copy: src = {{ src-path }}/index.html dest= {{ dst-path }}/index.html mode=0555
+    copy: src = {{ source_folder }}/index.html dest= {{ destin_folder }}/index.html mode=0555
     notify: RestartApache
 
   - name: Copy pics to servers
-    copy: src = {{ src-path }}/pics/{{ item }} dest= {{ dst-path }}/pics/ mode=0555
+    copy: src = {{ source_folder }}/pics/{{ item }} dest= {{ destin_folder }}/pics/ mode=0555
     loop: 
           - "q.jpg"
           - "qq.jpg"
