@@ -4,7 +4,7 @@
   become: yes
 
   vars:
-    source_folder: ./ansible/gj/
+    source_folder: ./ansible/gj
     destin_folder: /var/www/html
 
   tasks:
